@@ -2,11 +2,11 @@ import { useMutation, useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import * as apiClient from "../api-client";
 import ManageHotelForm from "../forms/ManageHotelForm/ManageHotelForm";
-import { useContext } from "react";
+import { useAppContext } from "../contexts/AppContext";
 
 const EditHotel = () => {
   const { hotelId } = useParams();
-  const { showToast } = useContext();
+  const { showToast } = useAppContext();
   const { data: hotel } = useQuery(
     "fetchMyHotelById",
     () => apiClient.fetchMyHotelById(hotelId || ""),
