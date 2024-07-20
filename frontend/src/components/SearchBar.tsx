@@ -14,7 +14,6 @@ const SearchBar = () => {
   const [checkOut, setCheckOut] = useState<Date>(search.checkOut);
   const [adultCount, setAdultCount] = useState<number>(search.adultCount);
   const [childCount, setChildCount] = useState<number>(search.childCount);
-
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     search.saveSearchValues(
