@@ -4,7 +4,7 @@ import BookingForm from "../forms/BookingForm/BookingForm";
 import { useSearchContext } from "../contexts/SearchContext";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import BookingDetailSummary from "../components/BookingDetailSummary";
+import BookingDetailsSummary from "../components/BookingDetailSummary";
 import { Elements } from "@stripe/react-stripe-js";
 import { useAppContext } from "../contexts/AppContext";
 
@@ -56,7 +56,7 @@ const Booking = () => {
 
   return (
     <div className="grid md:grid-cols-[1fr_2fr]">
-      <BookingDetailSummary
+      <BookingDetailsSummary
         checkIn={search.checkIn}
         checkOut={search.checkOut}
         adultCount={search.adultCount}

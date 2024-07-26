@@ -22,7 +22,7 @@ export type HotelType = {
   starRating: number;
   imageUrls: string[];
   lastUpdated: Date;
-  booking: BookingType[];
+  bookings: BookingType[];
   /* newProperty: string;*/
 };
 

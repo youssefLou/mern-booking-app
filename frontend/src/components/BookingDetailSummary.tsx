@@ -9,7 +9,7 @@ type Props = {
   hotel: HotelType;
 };
 
-const BookingDetailSummary = ({
+const BookingDetailsSummary = ({
   checkIn,
   checkOut,
   adultCount,
@@ -18,7 +18,7 @@ const BookingDetailSummary = ({
   hotel,
 }: Props) => {
   return (
-    <div className="grid gap-4 rounded-lg border-slate-300 p-5 h-fit">
+    <div className="grid gap-4 rounded-lg border border-slate-300 p-5 h-fit">
       <h2 className="text-xl font-bold">Your Booking Details</h2>
       <div className="border-b py-2">
         Location:
@@ -26,26 +26,27 @@ const BookingDetailSummary = ({
       </div>
       <div className="flex justify-between">
         <div>
-          {" "}
-          Check-IN :<div className="font-bold">{checkIn.toDateString()}</div>
+          Check-in
+          <div className="font-bold"> {checkIn.toDateString()}</div>
         </div>
         <div>
-          {" "}
-          Check-OUT :<div className="font-bold">{checkOut.toDateString()}</div>
+          Check-out
+          <div className="font-bold"> {checkOut.toDateString()}</div>
         </div>
       </div>
       <div className="border-t border-b py-2">
-        Total length of stay :
+        Total length of stay:
         <div className="font-bold">{numberOfNights} nights</div>
       </div>
+
       <div>
-        Guests :
+        Guests{" "}
         <div className="font-bold">
-          {adultCount} Adults & {childCount} Children
+          {adultCount} adults & {childCount} children
         </div>
       </div>
     </div>
   );
 };
 
-export default BookingDetailSummary;
+export default BookingDetailsSummary;
